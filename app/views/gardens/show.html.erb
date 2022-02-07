@@ -1,4 +1,11 @@
 <h1>This Garden</h1>
 <h1><%= @garden.title %></h1>
 <h2><%=@garden.address  %></h2>
-<p> <%=@garden.description %> </p>
+
+<%= link_to "Delete #{@garden.title}",
+            garden_path(@garden),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+<%= link_to "Edit #{@garden.title}",
+            edit_garden_path(@garden) %>
