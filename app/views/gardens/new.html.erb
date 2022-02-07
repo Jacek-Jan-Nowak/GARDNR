@@ -3,6 +3,6 @@
   <%= f.input :address, class: "garden_address", input_html: { style: "border-radius: 20px;" } %>
   <%= f.input :price, input_html: { style: "border-radius: 20px;" } %>
   <%= f.input :description, input_html: { style: "border-radius: 20px;" } %>
-
+  <%= f.input :photo, as: :file %>
   <%= f.submit "Add a Garden", class: "search-button", style: "margin-left: 0px;" %>
 <% end %>

@@ -4,7 +4,9 @@
   <% @gardens.each do |garden| %>
     <h1><%= garden.title %></h1>
     <h4><%= garden.address %></h3>
- 
     <p><%= garden.price %></p>
+    <% if garden.photos.attached? %>
+       <%= cl_image_tag garden.photos[0].key, width: 400, height: 210, crop: :fill   %>
+    <% end %>
   <% end %>
 <% end %>

@@ -3,6 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :gardens
   
+  has_one_attached :photo
+  
   validates :first_name, presence: true
   validates :last_name, presence: true
 
