@@ -1,0 +1,10 @@
+<h1>List of Gardens</h1>
+
+<% unless @gardens != nil %>
+  <% @gardens.each do |garden| %>
+    <h1><%= garden.title %></h1>
+    <h4><%= garden.address %></h3>
+    <p><%= garden.description %></p>
+    <p><%= garden.price %></p>
+  <% end %>
+<% end %>
