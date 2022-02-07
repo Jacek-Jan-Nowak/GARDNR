@@ -58,7 +58,18 @@ puts 'Creating 10 gardens'
       file = URI.open(gardens_urls.sample)
       garden.photos.attach(io: file, filename: 'photo.jpg')
     end
-    
-    puts 'Gardens created!'
-    puts 'ALL DONE!'
 end
+puts 'Gardens created!'
+
+# creating bookings
+puts 'Creating 30 fake bookings...'
+30.times do
+  Booking.create(
+    start_date: DateTime.now,
+    end_date: DateTime.now + 1,
+    user: User.all.sample,
+    garden: Garden.all.sample
+  )
+end
+
+puts 'ALL DONE!'
