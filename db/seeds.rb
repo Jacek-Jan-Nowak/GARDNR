@@ -9,7 +9,7 @@
 require "open-uri"
 
 puts "Resetting database"
-# Booking.destroy_all
+Booking.destroy_all
 Garden.destroy_all
 User.destroy_all
 
@@ -58,6 +58,15 @@ puts 'Creating 10 gardens'
       file = URI.open(gardens_urls.sample)
       garden.photos.attach(io: file, filename: 'photo.jpg')
     end
+
+    rand(2..7).times do
+      review = Review.create!(
+      rating: rand(1..5),
+      content: Faker::Movie.quote,
+      garden: garden,
+      user: garden.user
+      )
+    end  
 end
 puts 'Gardens created!'
 
