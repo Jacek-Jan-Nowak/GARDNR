@@ -1,0 +1,12 @@
+<div class="container card-form", style="width: 50vw;">
+  <div class="row">
+    <div class="col-6">
+      <div class="container">
+        <h1 class="display-4">Booking <%= @booking.id %> for <%= @garden.title %></h1>
+        <p class= "lead"> starting at <b><%=  @booking.start_date.strftime('%a %d-%m-%y')%><b></p>
+        <p class= "lead"> until <b><%= @booking.end_date.strftime('%a %d-%m-%y') %> </b></p>
+        <%= link_to "Go back to profile page", profile_path(@garden, @booking), class: "light-green-button-booking" %>
+      </div>
+    </div>
+  </div>
+</div>
