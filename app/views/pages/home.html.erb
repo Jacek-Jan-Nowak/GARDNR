@@ -1,2 +1,24 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="main_container">
+  <div class="main_left">
+    <h1>ANTS IN</h1>
+    <h2>YOUR PANTS</h2>
+    <div class="main_buttons">
+      <%= link_to "Rent a Garden", gardens_path, class: "main_rent" %>
+      <%= link_to "List a Garden", new_garden_path, class: "main_list" %>
+    </div>
+    <p>Go to the most beautiful gardens available.</p>
+  </div>
+  <div class="main_right">
+    <%= image_tag "https://res.cloudinary.com/duxof8o3p/image/upload/v1628185794/pixelart_iokrjw.png" %>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Follow us:</p>
+  <div class="icons">
+    <i class="fab fa-github"></i>
+    <i class="fab fa-linkedin"></i>
+    <i class="fas fa-envelope"></i>
+  </div>
+
+</div>

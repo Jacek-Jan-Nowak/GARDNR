@@ -1,0 +1,139 @@
+.card-garden {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 10px;
+  height: 300px;
+  border-radius: 20px;
+  color: #004b3f;
+}
+
+.card-garden > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.card-garden h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  width: 320px;
+}
+
+.card-garden p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-garden .card-garden-infos {
+  padding: 1vmin;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  margin-left: 10px;
+}
+
+.card-garden-infos .card-garden-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+  text-decoration: none;
+}
+
+
+.cards-profile {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 400px;
+  width: 600px;
+  border-radius: 20px;
+  color: #004b3f;
+  overflow: hidden;
+  margin-bottom: 30px;
+  
+
+  img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+  
+  }
+  .card-booking-text {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  p {
+    font-size: 16px;
+    opacity: .9;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #004b3f;
+    :hover {
+    }
+  }
+}
+
+.card-garden-infos a {
+  text-decoration: none;
+  color: #004b3f;
+  :hover {
+  }
+}
+
+.card-garden-infos .p {
+  text-align: left;
+}
+
+.card-form {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 20px;
+  width: 30vw;
+}
+
+.card-form-booking {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px;
+  border-radius: 20px;
+  width: 30vw;
+  height: 500px;
+}
+.details {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 10x;
+  margin: 0;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-weight: normal;
+  width: 300px;
+  .bit { 
+    position: relative;
+    text-align: right;
+    opacity: 0.8;
+  }
+  .badges{
+    position: relative;
+    background-color: #ccf26b; 
+    margin-top: 15px;
+  }
+  .price {
+    position: relative;
+    top: 2px;
+    margin-right: -40px;
+  }
+}

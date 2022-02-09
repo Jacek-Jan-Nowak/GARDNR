@@ -5,11 +5,88 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  // overflow: hidden;
+  overflow: hidden;
   text-decoration: none;
   color: #004b3f;
 }
 
+
+.scroll {
+  overflow-y: scroll;
+  position: absolute;
+  width: 100vw;
+}
+
+.main_container {
+  display: flex;
+  justify-content: space-between;
+}
+.main_left {
+  width: 60vw;
+}
+
+.main_right {
+  width: 80vw;
+  position: relative;
+}
+
+.main_buttons {
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 10vw;
+  margin: 0 auto;
+}
+
+.main_container h1 {
+  color: #004b3f;
+  font-size: 15vmin;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  padding-left: 40px;
+}
+
+.main_container h2 {
+  color: #004b3f;
+  font-size: 10vmin;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  padding-left: 40px;
+}
+
+.main_container p {
+  margin: 2vmin 0;
+  padding-left: 40px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 200;
+  font-size: 3vmin;
+}
+
+.footer p {
+  margin-top: 5vmin;
+  font-size: 2vmin;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 50px;
+}
 .blob {
   position: absolute;
   top: 0;
@@ -25,6 +102,7 @@ body {
   --color-stop: #43af5c;
   --color-bot: #ccf26b;
 }
+
 
 @keyframes move {
   0%   { transform: scale(1.8)   translate(10px, -30px); }
