@@ -24,7 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
-// import flatpickr from "flatpickr"; //second one is a folder existing in nodule folders, first one is the name of the function inside the folder
+import flatpickr from "flatpickr"; //second one is a folder existing in nodule folders, first one is the name of the function inside the folder
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';

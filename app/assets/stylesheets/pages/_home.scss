@@ -61,9 +61,19 @@ body {
   padding-left: 40px;
 }
 
-.main_container h2 {
+.main_container h3 {
   color: #004b3f;
-  font-size: 10vmin;
+  font-size: 8vmin;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  padding-left: 40px;
+}
+.main_container h4 {
+  color: #004b3f;
+  font-size: 6vmin;
   line-height: 1;
   font-weight: 300;
   letter-spacing: 2px;
