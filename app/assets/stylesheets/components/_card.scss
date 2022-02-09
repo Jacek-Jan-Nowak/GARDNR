@@ -124,13 +124,15 @@
 .details {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: flex-end;
   font-size: 10x;
   margin: 0;
   font-family: "Nunito", "Helvetica", "sans-serif";
   font-weight: normal;
-  width: 300px;
+  width: 95%;
+  margin: 0;
+  padding: 0;
   .bit { 
     position: relative;
     text-align: right;
@@ -144,6 +146,6 @@
   .price {
     position: relative;
     top: 2px;
-    margin-right: -40px;
+    
   }
 }
