@@ -24,11 +24,20 @@ require("channels")
 
 // External imports
 import "bootstrap";
+// import flatpickr from "flatpickr"; //second one is a folder existing in nodule folders, first one is the name of the function inside the folder
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-
+import { initMapbox } from '../packs/init_mapbox';
+import { initAutocomplete } from '../packs/init_autocomplete';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
+  initMapbox();
+  initAutocomplete();
+  flatpickr(".datepicker", {
+    altInput: true
+  });
   // initSelect2();
 });
+
+
