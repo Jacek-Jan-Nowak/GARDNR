@@ -1,5 +1,5 @@
 class GardensController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :new, :edit, :destroy, :create, :update]
   before_action :set_user
   before_action :set_garden, only: [:show, :edit, :update, :destroy]
 
@@ -30,7 +30,11 @@ class GardensController < ApplicationController
 
   def update
     @garden.update(strong_params)
-    redirect_to garden_path(@garden)
+    if @garden.save
+      redirect_to garden_path(@garden)
+    else
+      render :edit
+    end
   end
 
   def new
