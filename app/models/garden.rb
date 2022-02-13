@@ -8,12 +8,12 @@ class Garden < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
-  # include PgSearch::Model
-  # pg_search_scope :search_by_address,
-  #   against: [ :address ],
-  #   using: {
-  #     tsearch: { prefix: true } 
-  #   }
+  include PgSearch::Model
+  pg_search_scope :search_by_address,
+    against: [ :address ],
+    using: {
+      tsearch: { prefix: true } 
+    }
 
   # i need acces to reviews associated with that garden
 
@@ -29,7 +29,7 @@ class Garden < ApplicationRecord
   end
 
   def self.gardens_with_review
-    joins(:reviews).where(reviews: {rating: 5})
+    joins(:reviews)
     # sum = 0 
     # Garden.all.each do |garden|
     #   if garden.reviews.any?
@@ -40,10 +40,10 @@ class Garden < ApplicationRecord
   end
 
   def self.five_star_garden
-    joins(:reviews) 
-    SELECT * FROM gardens
-    JOIN reviews ON garden_id = review.garden_id
-    WHERE review.rating = 5 
+    joins(:reviews).where(reviews: {rating: 5})
+    # SELECT * FROM gardens
+    # JOIN reviews ON garden_id = review.garden_id
+    # WHERE review.rating = 5 
   end
 end
 
